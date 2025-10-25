@@ -1,0 +1,13 @@
+<form method="post">{% csrf_token %}
+{{ form.as_p }}
+<input type="submit">
+</form>
+{% if result %}
+<p>Original: {{ result.original }}</p>
+<p>Average: {{ result.avg }}</p>
+<p>Negative: {{ result.negative }}</p>
+<p>Positive count: {{ result.count_pos }}</p>
+<p>Even/Odd: {{ result.even_or_odd }}</p>
+<p>Sorted: {{ result.sorted }}</p>
+{% endif %}
+
